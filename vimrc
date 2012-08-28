@@ -65,8 +65,6 @@ set nu
 set hlsearch
 syntax on
 
-
-
 " Open and close all the three plugins on the same time
 nmap <F8> :TrinityToggleAll<CR>
 

@@ -64,6 +64,8 @@ endif
 set nu
 set hlsearch
 syntax on
+set tags=tags;
+set mouse=nv
 
 " Open and close all the three plugins on the same time
 nmap <F8> :TrinityToggleAll<CR>
@@ -76,9 +78,6 @@ nmap <F10> :TrinityToggleTagList<CR>
 
 " Open and close the NERD_tree.vim separately
 nmap <F11> :TrinityToggleNERDTree<CR>
-
-set tags=tags;
-set mouse=nv
 
 "
 " Cscope configuration

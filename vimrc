@@ -81,7 +81,9 @@ nmap <F11> :TrinityToggleNERDTree<CR>
 set tags=tags;
 set mouse=nv
 
+"
 " Cscope configuration
+"
 if has("cscope")
 set csprg=/usr/bin/cscope
 set csto=0
@@ -99,29 +101,29 @@ set cscopetag
 set cscopequickfix=s-,g-,c-,d-,t-,e-,f-,i-
 endif
 
-" }}}2   ShowMarks   {{{2
+"
+" showmarks
+"
+let g:showmarks_include='abcdefghijklmnopqrstuvwxyz' . 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+let g:showmarks_ignore_type=""
+let g:showmarks_textlower="\t"
+let g:showmarks_textupper="\t"
+let g:showmarks_textother="\t"
+let g:showmarks_auto_toggle = 0
+nnoremap <silent> mo :ShowMarksOn<CR>
+nnoremap <silent> mt :ShowMarksToggle<CR>
 
-  let g:showmarks_include='abcdefghijklmnopqrstuvwxyz' . 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-  let g:showmarks_ignore_type=""
-  let g:showmarks_textlower="\t"
-  let g:showmarks_textupper="\t"
-  let g:showmarks_textother="\t"
-  let g:showmarks_auto_toggle = 0
-  nnoremap <silent> mo :ShowMarksOn<CR>
-  nnoremap <silent> mt :ShowMarksToggle<CR>
-
-" }}}2   wokmarks   {{{2
-
-  let g:wokmarks_do_maps = 0
-  let g:wokmarks_pool = "abcdefghijklmnopqrstuvwxyz"
-  map mm <Plug>ToggleMarkWok
-  map mj <Plug>NextMarkWok
-  map mk <Plug>PrevMarkWok
-  map <M-Left>  <Plug>SetMarkWok
-  map <M-Right> <Plug>ToggleMarkWok
-  map <M-Up>    <Plug>PrevMarkWok
-  map <M-Down>  <Plug>NextMarkWok
-  autocmd User WokmarksChange :ShowMarksOn
-
-" }}}2
+"
+" wokmarks
+"
+let g:wokmarks_do_maps = 0
+let g:wokmarks_pool = "abcdefghijklmnopqrstuvwxyz"
+map mm <Plug>ToggleMarkWok
+map mj <Plug>NextMarkWok
+map mk <Plug>PrevMarkWok
+map <M-Left>  <Plug>SetMarkWok
+map <M-Right> <Plug>ToggleMarkWok
+map <M-Up>    <Plug>PrevMarkWok
+map <M-Down>  <Plug>NextMarkWok
+autocmd User WokmarksChange :ShowMarksOn
 
